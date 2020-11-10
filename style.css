@@ -1,0 +1,395 @@
+* { margin: 0; padding: 0; box-sizing: border-box;
+  
+  /* Color scheme */
+  
+  --textcolor: #121212;
+  --bgcolor: #fff;
+  --highlight: #385df6;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  * {
+    --textcolor: #dadada;
+    --bgcolor: #141414;
+    --highlight: #fd8e2c;
+  }
+}
+
+body {
+  font-size: 18px;
+  font-family: system-ui, sans-serif;
+  line-height: 1.45;
+  color: var(--textcolor);
+  background: var(--bgcolor);
+  position: relative;
+  max-width: 64em; /* remove this for a full-width layout */
+  margin: 0 auto; /* center the layout */
+}
+
+@media only screen and (max-width: 680px) { /* smaller screens */
+  body {
+    font-size: 16px;
+  }
+}
+
+/* ------- Sections ------- */
+
+section {
+  padding: calc(6em + 5vw) 5vw 5vw 5vw;
+  /* !! Everything below is needed !! */
+  display: none;
+  position: absolute;
+  top: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--bgcolor);
+}
+
+section:target { /* Show section */
+  display: block;
+}
+
+section#home { /* Show #home by default */
+  display: block;
+}
+
+/* ------- Header ------- */
+
+header {
+  padding: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+header h1 {
+  font-size: 1em;
+  flex: 1;
+  white-space: nowrap;
+  margin: 0 1em .5em 0;
+}
+
+nav a:not(:last-of-type) {
+  margin-right: 1.5vw;
+}
+
+/* ------- General ------- */
+
+a {
+  text-decoration: none;
+  color: var(--highlight);
+}
+
+a:hover {
+  border-bottom: 1px solid;
+}
+
+h2, h3, h4 {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 1.6em 0 .6em 0;
+}
+
+p, ul, ol, article {
+  max-width: 60ch; /* Limit line-length to 60 characters */
+  margin-bottom: 0.6em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li::marker {
+  content: "\2022   ";
+}
+
+li {
+  margin-bottom: 0.2em;
+}
+
+ul, ol {
+  padding-left:2ch;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+small {
+  font-size: 0.85em;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  background: currentColor;
+  opacity: .1;
+  margin: 1.2em 0;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+abbr[title]:hover {
+  opacity: 0.6;
+  cursor: help;
+}
+
+blockquote {
+  padding-left: 2ch;
+  opacity: 0.6;
+  border-left: 1px dotted;
+  margin-bottom: 0.6em;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+  
+code, pre, textarea {
+  font-family: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
+  font-size: 1em;
+  opacity: 0.7;
+}
+
+a code {
+  opacity:1;
+}
+
+textarea { /* for code samples */
+  color: inherit;
+  line-height:inherit;
+  padding:.4em .7em .5em .7em;
+  margin: 0.8em 0 1em 0;
+  width: 100%;
+  display:block;
+  white-space: pre;
+  border:0;
+  border-radius: 4px;
+  background:rgba(255,255,100,.075);
+  box-shadow: inset 1px 1px 0 rgba(0,0,0,.2), inset -1px -1px 0 rgba(0,0,0,.05) ;
+}
+
+/* Inline footnotes */
+
+label {
+  cursor: pointer;
+  vertical-align: super;
+  line-height: 1;
+  font-size: .75em;
+  font-weight: 500;
+  padding-left: .1em;
+}
+
+label:hover {
+  color: var(--highlight);
+}
+
+label:before {content:"[";}
+label:after {content:"]";}
+
+label + input,
+label + input + small {
+  display: none;
+}
+
+input:checked + small {
+  display: block;
+  padding: .8em 0 1em 2.5vw;;
+}
+
+/* Figures */
+
+figure {
+margin: 2em 0 1.5em 0;
+}
+
+figure figcaption {
+  padding: 0.8em 0 0 0;
+  font-size: 0.85em;
+  opacity: 0.6;
+}
+
+/* Responsive video embeds */
+
+figure.video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+figure.video iframe, figure.video object, figure.video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  visibility: hidden; /* so loading="lazy" should work? */
+}
+
+section:target iframe {
+  visibility: visible;
+}
+
+/* External links */
+
+a[href*="//"]:after { 
+  font-weight: 300;
+  content: "\2197"; /* top right arrow: ↗ */
+  color: var(--textcolor);
+  opacity: 0.25;
+}
+
+a[href*="//"]:hover:after {
+  color: var(--highlight);
+  opacity: 1;
+}
+
+/* File links */
+
+a:before { 
+  font-size: 0.7em;
+  margin-right: .4em;
+}
+
+/* Add more filetypes here if you want */
+
+a[href$=".pdf"]:before { content: "PDF"; }
+a[href$=".txt"]:before { content: "TXT"; }
+a[href$=".mp3"]:before { content: "MP3"; }
+a[href$=".jpeg"]:before,
+a[href$=".jpg"]:before,
+a[href$=".gif"]:before,
+a[href$=".png"]:before { content: "IMG"; }
+
+/* ------- News ------- */
+
+article {
+  margin-bottom: 5em;
+}
+
+article h1 {
+  font-size: 1em;
+  font-weight:700;
+  margin-bottom: 1em;
+}
+
+article time {
+  margin-left: .6em;
+  font-size: .8em;
+  font-weight: 400;
+  opacity: .6;
+}
+
+/* ------- Images Grid ------- */
+
+.grid {
+  display: grid;
+  grid-gap: 5vmin;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-flow: dense;
+  padding: 2em 0;
+}
+
+.grid a {
+  position: relative;
+  border: 0;
+}
+
+.grid a:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.grid a img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.grid a:hover {
+  transform: scale(0.975);
+}
+
+/* ------- Lightbox ------- */
+
+.lightbox {
+  position: fixed;
+  display: none;
+  color: var(--textcolor);
+}
+
+.lightbox:target {
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--bgcolor);
+  border: 0;
+  z-index: 3;
+}
+
+.lightbox img {
+  max-height: 100vh;
+  z-index: 4;
+}
+
+.lightbox:target:before { /* Loading spinner */
+  content:"";
+  height: 2em;
+  width: 2em;
+  animation: spin .8s infinite linear;
+  border: 1px solid;
+  border-right-color: transparent;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  transform: translateX(-50%);
+  opacity: .25;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.lightbox:target:after { /* × to close */
+  content: "\00D7";
+  position: fixed;
+  font-size: 2em;
+  font-weight: 200;
+  line-height: 0;
+  top: 0.75em;
+  right: 0.5em;
+  z-index: 4;
+}
+
+/* ------- Print ------- */
+
+@media print {
+  
+  nav, .lightbox:target:after { display: none; }
+  
+  article, figure, img {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  
+  /* Inline footnotes */
+  label + input + small { display: inline; }
+  label + input + small:before { content: "["; }
+  label + input + small:after { content: "]"; }
+    
+}

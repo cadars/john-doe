@@ -1,0 +1,235 @@
+<!-- JOHN DOE WAS HERE -- 10.10.2020 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    
+    <title>John Doe’s page</title>
+    <meta name="description" content="A way to make small websites">
+    
+    <!-- Recommended minimum -->
+    <meta property="og:title" content="John Doe’s page">
+    <meta property="og:description" content="A way to make small websites">
+    <meta property="og:image" content="https://john-doe.neocities.org/img/john-doe.png">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- You could also inline the stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body>
+    
+    <header>
+      <h1>
+        <a href="#home">John Doe</a>
+      </h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#photos">Photos</a>
+      </nav>
+    </header>
+    
+    <main>
+      
+      <!-- ----------
+      ---- HOME -----
+      ----------- -->
+      
+      <section id="home">
+        
+        <p>This website is a single <abbr title="Hypertext Markup Language">HTML</abbr> file. It simply uses the <code>#anchor</code> suffix (from <a href="https://www.w3.org/History/19921103-hypertext/hypertext/WWW/Addressing/Addressing.html" target="_blank" rel="noopener">1992</a>) and the <code>:target</code> <abbr title="Cascading Style Sheets">CSS</abbr> selector to show and hide pages/content.</p>
+        
+        <p>This setup<label for="fn1">1</label><input type="checkbox" id="fn1"><small>
+          
+          It might get unpractical for more than a handful of pages, but it comes in handy if all you need is a simple website.
+                    
+          </small> is databaseless, javascriptless, and buildshit-free, so you can edit your website with a text editor and upload it somewhere<label for="fn2">2</label><input type="checkbox" id="fn2"><small>
+            
+          This page is hosted for free at <a href="https://neocities.org" target="_blank" rel="noopener">Neocities</a>, where you have the option to use their somewhat clunky online code editor to update your site. <a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages</a> would be another free but resilient possibility.
+          
+          </small> like a normal person.</p>
+        
+        <h2>Do it yourself:</h2>
+        <ol>
+          <li>Download <a download href="/index.html"><code>index.html</code></a> and <a download href="/style.css"><code>style.css</code></a></li>
+          <li>Add a <code>&#60;section&#62;</code> with an <code>id</code> to define a new page in <code>index.html</code>
+            <textarea readonly rows="3" data-type="HTML">
+<section id="contact">
+   Contact me!
+</section></textarea> 
+          <li> And <a href="#if-you-want">if you want</a>, a link to it inside <code>&#60;nav&#62;</code>
+            <textarea readonly rows="1" data-type="HTML">
+<a href="#contact">Contact</a></textarea>
+          </li>
+        </ol>
+
+      </section>
+      
+      <!-- ----------
+      ---- ABOUT ----
+      ----------- -->
+      
+      <section id="about">
+        
+        <p><b>John Doe</b> (for males) and <b>Jane Doe</b> (for females) are <a href="https://en.wikipedia.org/wiki/Multiple-use_name"  target="_blank" rel="noopener" title="Multiple-use name">multiple-use names</a> that are used when the true name of a person is unknown or is being intentionally concealed.<label for="wiki1">1</label><input type="checkbox" id="wiki1"><small>
+          
+         <a href="https://www.courts.ca.gov/documents/BTB_23_5L_9.pdf">“The People of the State of California v. John Doe”</a>, <i>Judicial Council of California</i>. Retrieved 8 February 2019
+          
+         </small></p>
+         <p>In the context of <a href="https://en.wikipedia.org/wiki/Law_enforcement_in_the_United_States"  target="_blank" rel="noopener" title="Law enforcement in the United States">law enforcement in the United States</a>, such names are often used to refer to a <a href="https://en.wikipedia.org/wiki/Dead_body"  target="_blank" rel="noopener" title="Dead body">corpse</a> whose identity is unknown or unconfirmed. Secondly, such names are also often used to refer to a hypothetical <a href="https://en.wikipedia.org/wiki/Everyman"  target="_blank" rel="noopener" title="Everyman">everyman</a> in other contexts, in a manner similar to “<a href="https://en.wikipedia.org/wiki/John_Q._Public"  target="_blank" rel="noopener" title="John Q. Public">John Q. Public</a>” or “Joe Public”. There are many variants to the above names, including “John Roe”, “Richard Roe”, “Jane Roe” and “Baby Doe”, “Janie Doe” or “Johnny Doe” (for&nbsp;children).
+        </p>
+        
+        <figure> 
+          <a href="#img-about">         
+            <img loading="lazy" alt="" src="https://dummyimage.com/1280x720/f2f2f2/999" width="1280" height="720">
+          </a>
+          <figcaption>This is the image caption.</figcaption>
+        </figure>
+                        
+        <p>In other <a href="https://en.wikipedia.org/wiki/English-speaking_countries"  target="_blank" rel="noopener" title="English-speaking countries">English-speaking countries</a>, unique placeholder names, numbers or <a href="https://en.wikipedia.org/wiki/Codename"  target="_blank" rel="noopener" title="Codename">codenames</a> have become more often used in the context of police investigations. This has included the <a href="https://en.wikipedia.org/wiki/United_Kingdom"  target="_blank" rel="noopener" title="United Kingdom">United Kingdom</a>, where usage of “John Doe” originated during the <a href="https://en.wikipedia.org/wiki/Middle_Ages"  target="_blank" rel="noopener" title="Middle Ages">Middle Ages</a>. However, the legal term <i>John Doe injunction</i> or <i>John Doe order</i><label for="wiki2">2</label><input type="checkbox" id="wiki2"><small>
+          
+          <a href="https://web.archive.org/web/20120911032452/http://www.pressgazette.co.uk/story.asp?storyCode=30920&amp;sectioncode=1">“Obtaining a John Doe order”</a>, PressGazette. Archived from <a href="http://www.pressgazette.co.uk/story.asp?storyCode=30920&amp;sectioncode=1">the original</a> on 11 September 2012. Retrieved 2 October 2012
+          
+        </small> has survived in <a href="https://en.wikipedia.org/wiki/English_law"  target="_blank" rel="noopener" title="English law">English law</a> and other legal systems influenced by it.</p>
+        
+        <p>Other names such as “<a href="https://en.wikipedia.org/wiki/Joe_Bloggs"  target="_blank" rel="noopener" title="Joe Bloggs">Joe Bloggs</a>” or “John Smith” have sometimes been informally used as placeholders for an everyman in the UK, <a href="https://en.wikipedia.org/wiki/Australia"  target="_blank" rel="noopener" title="Australia">Australia</a> and <a href="https://en.wikipedia.org/wiki/New_Zealand"  target="_blank" rel="noopener" title="New Zealand">New Zealand</a>; such names are seldom used in legal or police circles in the same sense as John Doe. <a href="https://en.wikipedia.org/wiki/John_Doe"  target="_blank" rel="noopener" title="More at Wikipedia" target="_blank" rel="noopener">[…]</a>
+        </p>
+
+      </section>
+
+      <!-- ----------
+      ---- NEWS -----
+      ----------- -->
+      
+      <section id="news"> 
+        
+        <article>
+          <h1>Blogging with Joe Bloggs <time>10.10.2020</time></h1>
+          <p> One <em>could</em> use this setup to write <s>a blog</s> short updates. It's best for text, but for the occasional <a href="#nice-image" title="Tom from Myspace">image</a> I would recommmend using the <code>loading="lazy"</code> attribute, so images get loaded only when needed:</p>
+          
+          <textarea readonly rows="1" data-type="HTML"><img src="image.jpg" loading="lazy"></textarea> 
+    
+          <p>I think you can use it too for <code>iframe</code> embeds(?), but maybe just write a link to the Youtube video instead.</p>
+        </article>
+        
+        <article>
+          <h1>No-hassle systems for producing websites <time>09.20.2020</time></h1>
+          <p>Not everyone knows or wants to write <abbr title="Hypertext Markup Language">HTML</abbr>, so here are some <abbr title="Content Management System">CMS</abbr> options:</p>
+          <ul>
+            <li><a href="https://github.com/josephernest/void" target="_blank" rel="noopener">Void</a> (free) by Joseph Ernest<label for="bloggggg">*</label><input type="checkbox" id="bloggggg"><small>
+              Also check <a href="https://github.com/josephernest/bloggggg" target="_blank" rel="noopener">bloggggg</a> by the same author.
+            </small></li>
+            <li><a href="https://datenstrom.se/yellow/" target="_blank" rel="noopener">Yellow</a> (free) by Datenstrom</li>
+            <li><a href="https://getkirby.com" target="_blank" rel="noopener">Kirby</a> (not free) by Bastian Allgeier GmbH</li>
+          </ul>
+          <p>All of these use flat files for content, so they don’t need a database; meaning less trouble to install, backup, transfer, or fix your website. They only require <abbr title="PHP: Hypertext Preprocessor">PHP</abbr>, available on any kind of web server.</p>
+        </article>
+         
+        <article>
+          <h1><a href="https://html.energy/" target="_blank" rel="noopener"><abbr title="Hypertext Markup Language">HTML</abbr> Energy</a> <time>06.02.2020</time></h1>
+          <figure>
+            <img src="https://html.energy/images/star.png" loading="lazy" style="animation: spin 100s infinite linear;">
+          </figure>
+          <blockquote>
+            <p><em><abbr title="Hypertext Markup Language">HTML</abbr> energy is all around us and in this very website.<br>
+            Building websites has become complex, but the energy of <abbr title="Hypertext Markup Language">HTML</abbr> persists.<br>
+            What makes <abbr title="Hypertext Markup Language">HTML</abbr> special is its simplicity.<br>
+            <abbr title="Hypertext Markup Language">HTML</abbr> isn’t a vast language, yet you can do a lot with it.<br>
+            Anyone who wants to publish on the web can write <abbr title="Hypertext Markup Language">HTML</abbr>.<br>
+            This accessibility and ease of use is where its energy resides.<br>
+            Who’s writing <abbr title="Hypertext Markup Language">HTML</abbr> today?</em></p>
+          </blockquote>
+          <p>Seemed relevant.</p>
+        </article>  
+          
+        <article>
+          <h1>Top 3 Headlines of the Decade <time>04.06.06</time></h1>
+          <figure>
+            <img loading="lazy" alt="" src="https://dummyimage.com/800x600/f2f2f2/999" width="800" height="600">
+            <figcaption>Placeholder image</figcaption>
+          </figure>
+          <ol>
+            <li><a href="https://example.com/pdf.pdf">The Complete Insider’s Guide to Penny Stocks</a></li>
+            <li><a href="https://example.com">What Science Says About Productivity</a></li>
+            <li><a href="https://example.com">Why Your Cat Bites You</a></li>
+          </ol>
+        </article>
+              
+        <article>
+          <h1><a href="https://example.com">Why Your Cat Bites You</a> <time>12.12.04</time></h1>
+          <p>Honestly you don't want to know.</p>
+        </article>
+      
+      </section>
+
+      <!-- ----------
+      ---- PHOTOS ---
+      ----------- -->
+      
+      <section id="photos">
+        
+        <p>An example of a photo gallery with a <abbr title="Cascading Style Sheets">CSS</abbr>-only lightbox.</p>
+
+        <!-- You can use this grid of images in any page -->
+        
+        <div class="grid">
+          <a href="#img-01"><img loading="lazy" alt="" src="https://dummyimage.com/300x300/f2f2f2/999"></a>
+          <a href="#img-02"><img loading="lazy" alt="" src="https://dummyimage.com/400x300/f2f2f2/999"></a>
+          <a href="#img-03"><img loading="lazy" alt="" src="https://dummyimage.com/300x400/f2f2f2/999"></a>
+          <a href="#img-04"><img loading="lazy" alt="" src="https://dummyimage.com/300x300/f2f2f2/999"></a>
+          <a href="#img-05"><img loading="lazy" alt="" src="https://dummyimage.com/400x300/f2f2f2/999"></a>
+          <a href="#img-06"><img loading="lazy" alt="" src="https://dummyimage.com/300x400/f2f2f2/999"></a>
+          <a href="#img-07"><img loading="lazy" alt="" src="https://dummyimage.com/300x300/f2f2f2/999"></a>
+          <a href="#img-08"><img loading="lazy" alt="" src="https://dummyimage.com/400x300/f2f2f2/999"></a>
+          <a href="#img-09"><img loading="lazy" alt="" src="https://dummyimage.com/300x400/f2f2f2/999"></a>
+          <a href="#img-10"><img loading="lazy" alt="" src="https://dummyimage.com/300x300/f2f2f2/999"></a>
+          <a href="#img-11"><img loading="lazy" alt="" src="https://dummyimage.com/400x300/f2f2f2/999"></a>
+          <a href="#img-12"><img loading="lazy" alt="" src="https://dummyimage.com/300x400/f2f2f2/999"></a>
+          <a href="#img-13"><img loading="lazy" alt="" src="https://dummyimage.com/300x300/f2f2f2/999"></a>
+          <a href="#img-14"><img loading="lazy" alt="" src="https://dummyimage.com/400x300/f2f2f2/999"></a>
+          <a href="#img-15"><img loading="lazy" alt="" src="https://dummyimage.com/300x400/f2f2f2/999"></a>
+        </div>
+        
+      </section>
+      
+      <!-- ANOTHER PAGE -->
+        
+      <section id="if-you-want"> 
+        <p>This page is not referenced in the website menu, for example.</p>
+        <p><a href="#home">← back</a></p>
+      </section>
+      
+    </main>
+    
+    <!-- ----------
+    LIGHTBOX IMAGES
+    ----------- -->
+
+    <!-- High resolution images for the PHOTOS grid -->
+    
+    <a href="#photos" class="lightbox" id="img-01"><img loading="lazy" alt="" src="https://dummyimage.com/3000x3000/f2f2f2/999"></a>
+    <a href="#photos" class="lightbox" id="img-02"><img loading="lazy" alt="" src="https://dummyimage.com/4000x3000/f2f2f2/999"></a>
+    <a href="#photos" class="lightbox" id="img-03"><img loading="lazy" alt="" src="https://dummyimage.com/3000x4000/f2f2f2/999"></a>
+    <a href="#photos" class="lightbox" id="img-04"><img loading="lazy" alt="" src="https://dummyimage.com/3000x3000/f2f2f2/999"></a>
+    <a href="#photos" class="lightbox" id="img-05"><img loading="lazy" alt="" src="https://dummyimage.com/4000x3000/f2f2f2/999"></a>
+    <a href="#photos" class="lightbox" id="img-06"><img loading="lazy" alt="" src="https://dummyimage.com/3000x4000/f2f2f2/999"></a>
+    <a href="#photos" class="lightbox" id="img-07"><img loading="lazy" alt="" src="https://dummyimage.com/3000x3000/f2f2f2/999"></a>
+    <a href="#photos" class="lightbox" id="img-08"><img loading="lazy" alt="" src="https://dummyimage.com/4000x3000/f2f2f2/999"></a>
+    <a href="#photos" class="lightbox" id="img-09"><img loading="lazy" alt="" src="https://dummyimage.com/3000x4000/f2f2f2/999"></a>
+    <a href="#photos" class="lightbox" id="img-10"><img loading="lazy" alt="" src="https://dummyimage.com/3000x3000/f2f2f2/999"></a>
+    <a href="#photos" class="lightbox" id="img-11"><img loading="lazy" alt="" src="https://dummyimage.com/4000x3000/f2f2f2/999"></a>
+    <a href="#photos" class="lightbox" id="img-12"><img loading="lazy" alt="" src="https://dummyimage.com/3000x4000/f2f2f2/999"></a>
+    <a href="#photos" class="lightbox" id="img-13"><img loading="lazy" alt="" src="https://dummyimage.com/3000x3000/f2f2f2/999"></a>
+    <a href="#photos" class="lightbox" id="img-14"><img loading="lazy" alt="" src="https://dummyimage.com/4000x3000/f2f2f2/999"></a>
+    <a href="#photos" class="lightbox" id="img-15"><img loading="lazy" alt="" src="https://dummyimage.com/3000x4000/f2f2f2/999"></a>    
+    
+    <!-- Other images -->
+    
+    <a href="#about" class="lightbox" id="img-about"><img loading="lazy" alt="" src="https://dummyimage.com/1920x1080/f2f2f2/999"></a>
+    <a href="#news" class="lightbox" id="nice-image"><img loading="lazy" alt="Tom from Myspace" src="https://64.media.tumblr.com/f12d9c51ca4c32f531ba4dedbd7ec360/278aa06f9ae325c4-9d/s1280x1920/6a6ea348ea6c125353a0a8ad62eb11eb79486750.jpg"></a>
+    
+  </body>
+</html>
