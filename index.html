@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width">
     
     <title>John Doe’s page</title>
-    <meta name="description" content="A way to make small websites">
+    <meta name="description" content="A simple way to make HTML websites">
     
     <!-- Recommended minimum -->
     <meta property="og:title" content="John Doe’s page">
-    <meta property="og:description" content="A way to make small websites">
+    <meta property="og:description" content="A simple way to make HTML websites">
     <meta property="og:image" content="https://john-doe.neocities.org/img/john-doe.png">
     <meta name="twitter:card" content="summary_large_image">
     
@@ -56,16 +56,19 @@
         <ol>
           <li>Download <a download href="/index.html"><code>index.html</code></a> and <a download href="/style.css"><code>style.css</code></a></li>
           <li>Add a <code>&#60;section&#62;</code> with an <code>id</code> to define a new page in <code>index.html</code>
-            <textarea readonly rows="3" data-type="HTML">
+            <textarea id="addsection" readonly rows="3" rel="html">
 <section id="contact">
    Contact me!
-</section></textarea> 
+</section></textarea>
+            <label class="hide" for="addsection">Section HTML</label>
           <li> And <a href="#if-you-want">if you want</a>, a link to it inside <code>&#60;nav&#62;</code>
-            <textarea readonly rows="1" data-type="HTML">
+            <textarea id="addnav" readonly rows="1" rel="html">
 <a href="#contact">Contact</a></textarea>
+            <label for="addnav">Nav link HTML</label>
           </li>
         </ol>
-
+        <style>textarea + label {position:absolute;text-indent:-99999em;}</style>
+        
       </section>
       
       <!-- ----------
@@ -110,8 +113,9 @@
           <h1>Blogging with Joe Bloggs <time>10.10.2020</time></h1>
           <p> One <em>could</em> use this setup to write <s>a blog</s> short updates. It's best for text, but for the occasional <a href="#nice-image" title="Tom from Myspace">image</a> I would recommmend using the <code>loading="lazy"</code> attribute, so images get loaded only when needed:</p>
           
-          <textarea readonly rows="1" data-type="HTML"><img src="image.jpg" loading="lazy"></textarea> 
-    
+          <textarea id="lazy" readonly rows="1" rel="html"><img src="image.jpg" loading="lazy"></textarea> 
+          <label for="lazy">lazy loading HTML</label>
+          
           <p>I think you can use it too for <code>iframe</code> embeds(?), but maybe just write a link to the Youtube video instead.</p>
         </article>
         
@@ -131,7 +135,7 @@
         <article>
           <h1><a href="https://html.energy/" target="_blank" rel="noopener"><abbr title="Hypertext Markup Language">HTML</abbr> Energy</a> <time>06.02.2020</time></h1>
           <figure>
-            <img src="https://html.energy/images/star.png" loading="lazy" style="animation: spin 100s infinite linear;">
+            <img src="https://html.energy/images/star.png" alt="HTML Energy Star" loading="lazy" style="animation: spin 100s infinite linear;">
           </figure>
           <blockquote>
             <p><em><abbr title="Hypertext Markup Language">HTML</abbr> energy is all around us and in this very website.<br>

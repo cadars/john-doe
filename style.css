@@ -145,10 +145,11 @@ blockquote {
   margin-bottom: .6em;
 }
 
-img, video {
+img, svg, video, audio {
   display: block;
   max-width: 100%;
   height: auto;
+  fill: currentColor;
 }
   
 code, pre, textarea {
@@ -162,18 +163,19 @@ a code {
 }
 
 textarea { /* for code samples */
-  font-size: .85em;
+  font-size: .9em;
   color: inherit;
   line-height:inherit;
-  padding:.4em .7em .5em .7em;
+  padding:.5em .8em;
   margin: .8em 0 1em 0;
+  position: relative;
+  display: block;
   width: 100%;
-  display:block;
   white-space: pre;
   border:0;
   border-radius: 4px;
   background:rgba(255,255,100,.075);
-  box-shadow: inset 1px 1px 0 rgba(0,0,0,.2), inset -1px -1px 0 rgba(0,0,0,.05) ;
+  box-shadow: inset 1px 1px 0 rgba(0,0,0,.2), inset -1px -1px 0 rgba(0,0,0,.04) ;
 }
 
 /* Inline footnotes */
