@@ -8,7 +8,7 @@ To create a new page, add a `<section>` with a unique `id`
    Contact me!
 </section>
 ```
-Then add a link to it inside `<nav>`
+Then you could add a link to it inside `<nav>`
 ```html
 <a href="#contact">Contact</a>
 ```
