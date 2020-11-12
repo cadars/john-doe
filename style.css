@@ -24,7 +24,7 @@ body {
   background: var(--bgcolor);
   position: relative;
   max-width: 64em; /* remove this for a full-width layout */
-  margin: 0 auto; /* center the layout */
+  margin: 0 auto; /* centers the layout */
 }
 
 @media only screen and (max-width: 680px) { /* smaller screens */
@@ -36,7 +36,7 @@ body {
 /* ------- Sections ------- */
 
 section {
-  padding: calc(6em + 5vw) 5vw 5vw 5vw;
+  padding: calc(6em + 5vw) 5vw 10vw 5vw;
   /* !! Everything below is needed !! */
   display: none;
   position: absolute;
@@ -68,7 +68,7 @@ header h1 {
   font-size: 1em;
   flex: 1;
   white-space: nowrap;
-  margin: 0 1em .5em 0;
+  padding: 0 20vw .5em 0;
 }
 
 nav a:not(:last-of-type) {
@@ -274,8 +274,8 @@ a[href$=".png"]:before { content: "IMG"; }
 
 /* ------- News ------- */
 
-article {
-  margin-bottom: 5em;
+article + article {
+  margin-top: 5em;
 }
 
 article h1 {
