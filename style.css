@@ -36,7 +36,7 @@ body {
 /* ------- Sections ------- */
 
 section {
-  padding: calc(6em + 5vw) 5vw 10vw 5vw;
+  padding: calc(6em + 5vw) 5vw 8vw 5vw;
   /* !! Everything below is needed !! */
   display: none;
   position: absolute;
@@ -141,8 +141,19 @@ abbr[title]:hover {
 blockquote {
   padding-left: 2ch;
   opacity: .6;
-  border-left: 1px dotted;
   margin-bottom: .6em;
+  position: relative;
+}
+
+blockquote:before {
+  content: "";
+  position:absolute;
+  left: 0;
+  top: .3em;
+  bottom: .3em;
+  background: currentColor;
+  width: 1px;
+  opacity: .2;
 }
 
 img, svg, video, audio {
@@ -185,7 +196,6 @@ label {
   vertical-align: super;
   line-height: 1;
   font-size: .75em;
-  font-weight: 500;
   padding-left: .1em;
 }
 
