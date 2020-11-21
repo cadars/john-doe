@@ -352,6 +352,7 @@ article time {
   margin:0;
   display:grid;
   place-items:center;
+  align-content: center;
   scroll-snap-align:center;
 }
 
@@ -374,6 +375,7 @@ article time {
   height: 100vh;
   display: grid;
   place-items: center;
+  align-content: center;
   background: var(--bgcolor);
   border: 0;
   z-index: 3;
