@@ -134,13 +134,13 @@ abbr {
 }
 
 abbr[title]:hover {
-  opacity: .6;
+  opacity: .7;
   cursor: help;
 }
 
 blockquote {
   padding-left: 2ch;
-  opacity: .6;
+  opacity: .7;
   margin-bottom: .6em;
   position: relative;
 }
@@ -225,7 +225,7 @@ figure {
 figure figcaption {
   margin: 0.8em 0 0 0;
   font-size: .85em;
-  opacity: .6;
+  opacity: .7;
 }
 
 /* Responsive video embeds */
@@ -298,7 +298,7 @@ article time {
   margin-left: .6em;
   font-size: .8em;
   font-weight: 400;
-  opacity: .6;
+  opacity: .7;
 }
 
 /* ------- Images Grid ------- */
