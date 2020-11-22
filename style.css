@@ -219,11 +219,11 @@ input:checked + small {
 /* Figures */
 
 figure {
-margin: 2em 0 1.5em 0;
+  margin: 2em 0 1.5em 0;
 }
 
 figure figcaption {
-  padding: 0.8em 0 0 0;
+  margin: 0.8em 0 0 0;
   font-size: .85em;
   opacity: .6;
 }
@@ -354,6 +354,8 @@ article time {
   place-items:center;
   align-content: center;
   scroll-snap-align:center;
+  background-size: cover; /* Full bleed background images */
+  background-position: center center;
 }
 
 .slides figure img {
