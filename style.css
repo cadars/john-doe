@@ -86,6 +86,11 @@ a:hover {
   border-bottom: 1px solid;
 }
 
+section h1 {
+  font-size: 1em;
+  margin: 0 0 1em 0;
+}
+
 h2, h3, h4 {
   font-size: 1em;
   font-weight: 600;
@@ -163,7 +168,7 @@ img, svg, video, audio {
   fill: currentColor;
 }
   
-code, pre, textarea {
+code, textarea {
   font-family: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
   font-size: 1em;
   opacity: .7;
@@ -173,7 +178,7 @@ a code {
   opacity:1;
 }
 
-textarea { /* for code samples */
+pre, textarea { /* for code samples */
   font-size: .9em;
   color: inherit;
   line-height:inherit;
@@ -288,10 +293,10 @@ article + article {
   margin-top: 5em;
 }
 
-article h1 {
+article h2 {
   font-size: 1em;
-  font-weight:700;
-  margin-bottom: 1em;
+  font-weight: 700;
+  margin: 0 0 1em 0;
 }
 
 article time {
