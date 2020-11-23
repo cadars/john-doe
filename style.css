@@ -337,40 +337,53 @@ article time {
 /* ------- Slideshow ------- */
 
 .slides {
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  overflow-y:scroll;
-  scroll-snap-type:y mandatory;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 .slides figure {
-  height:100vh;
-  padding:0 5vw;
-  margin:0;
-  display:grid;
-  place-items:center;
+  height: 100vh;
+  padding: 0 5vw;
+  margin: 0;
+  display: grid;
+  place-items: center;
   align-content: center;
-  scroll-snap-align:center;
+  scroll-snap-align: center;
   background-size: cover; /* Full bleed background images */
   background-position: center center;
 }
 
 .slides figure img {
-  max-height:88vh;
+  max-height: 88vh;
+}
+
+.slides figure.cover {
+  padding: 0;
+}
+
+.slides figure.cover img {
+  max-height: none;
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
 /* ------- Lightbox ------- */
 
 .lightbox {
-  position: fixed;
   display: none;
   color: var(--textcolor);
 }
 
 .lightbox:target {
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
