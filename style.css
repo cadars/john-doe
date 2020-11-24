@@ -435,6 +435,10 @@ article time {
   right: .5em;
   z-index: 4;
 }
+/* ------- Mobile ------- */
+@media(max-width:540px) {
+  nav { width: 100%; }
+}
 
 /* ------- Print ------- */
 
