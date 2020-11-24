@@ -27,12 +27,6 @@ body {
   margin: 0 auto;  /* centers the layout */
 }
 
-@media only screen and (max-width: 680px) { /* smaller screens */
-  body {
-    font-size: 16px;
-  }
-}
-
 /* ------- Sections ------- */
 
 section {
@@ -435,9 +429,15 @@ article time {
   right: .5em;
   z-index: 4;
 }
+
 /* ------- Mobile ------- */
-@media(max-width:540px) {
-  nav { width: 100%; }
+
+@media only screen and (max-width: 680px) {
+  body { font-size: 16px; }
+}
+
+@media only screen and (max-width: 540px) {
+  nav { width: 100%; } /* Fix for older webkit versions */
 }
 
 /* ------- Print ------- */
