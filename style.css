@@ -19,7 +19,7 @@
 body {
   font-size: 18px;
   font-family: system-ui, sans-serif;
-  line-height: 1.45;
+  line-height: 1.4;
   color: var(--textcolor);
   background: var(--bgcolor);
   position: relative;
@@ -55,7 +55,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  z-index: 2;
+  z-index: 2;  
 }
 
 header h1 {
@@ -284,11 +284,10 @@ a[href$=".png"]:before { content: "IMG"; }
 /* ------- News ------- */
 
 article + article {
-  margin-top: 5em;
+  margin-top: 4.5em;
 }
 
 article h2 {
-  font-size: 1em;
   font-weight: 700;
   margin: 0 0 1em 0;
 }
@@ -315,7 +314,11 @@ article time {
   border: 0;
 }
 
-.grid a:before {
+.grid a:hover {
+  transform: scale(.975);
+}
+
+.grid a:before { /* To enforce a square ratio */
   content: "";
   display: block;
   padding-top: 100%;
@@ -327,10 +330,6 @@ article time {
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-.grid a:hover {
-  transform: scale(.975);
 }
 
 /* ------- Slideshow ------- */
@@ -353,12 +352,10 @@ article time {
   place-items: center;
   align-content: center;
   scroll-snap-align: center;
-  background-size: cover; /* Full bleed background images */
-  background-position: center center;
 }
 
 .slides figure img {
-  max-height: 88vh;
+  max-height: 88vh; /* Adjust if needed */
 }
 
 .slides figure.cover {
@@ -385,8 +382,8 @@ article time {
   position: fixed;
   top: 0;
   right: 0;
+  bottom: 0;
   left: 0;
-  height: 100vh;
   display: grid;
   place-items: center;
   align-content: center;
