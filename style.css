@@ -54,8 +54,9 @@ header {
   padding: 5vw 5vw 0 5vw;
   display: flex;
   flex-wrap: wrap;
-  position: relative;
-  z-index: 2;  
+  position: absolute;
+  width: 100%;
+  z-index: 2;
 }
 
 header h1 {
@@ -339,7 +340,7 @@ article time {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
