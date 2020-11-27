@@ -305,7 +305,7 @@ article time {
 .grid {
   display: grid;
   grid-gap: 5vmin;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* 150px = minimum image size */
   grid-auto-flow: dense;
   padding: 2em 0;
 }
@@ -319,7 +319,8 @@ article time {
   transform: scale(.975);
 }
 
-.grid a:before { /* To enforce a square ratio */
+/* For a square ratio */
+.grid a:before {
   content: "";
   display: block;
   padding-top: 100%;
@@ -428,7 +429,7 @@ article time {
   z-index: 4;
 }
 
-/* ------- Mobile ------- */
+/* ------- Smaller screens ------- */
 
 @media only screen and (max-width: 680px) {
   body { font-size: 16px; }
@@ -450,8 +451,26 @@ article time {
   }
   
   /* Inline footnotes */
+  
   label + input + small { display: inline; }
   label + input + small:before { content: "["; }
   label + input + small:after { content: "]"; }
+  
+  /* Slides */
+  
+  .slides, .slides figure {
+    position: relative;
+    height: auto;
+    padding: 0;
+  }
+
+  .slides figure img, .slides figure.cover img {
+    max-height: auto;
+    position: relative;
+    z-index: 1;
+    width: auto;
+    height: 100vh;
+    object-fit: contain;
+  }
     
 }
