@@ -31,7 +31,7 @@ body {
 
 section {
   padding: calc(6em + 5vw) 5vw 8vw 5vw;
-  /* !! Everything below is needed !! */
+  /* ! Everything below is needed ! */
   display: none;
   position: absolute;
   top: 0;
@@ -61,9 +61,9 @@ header {
 
 header h1 {
   font-size: 1em;
-  flex: 1;
+  flex: 1; /* pushes nav to the right */
   white-space: nowrap;
-  padding: 0 20vw .5em 0;
+  padding: 0 5vw .5em 0;
 }
 
 nav a:not(:last-of-type) {
