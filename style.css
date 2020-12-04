@@ -255,6 +255,7 @@ section:target iframe {
 
 a[href*="//"]:after { 
   font-weight: 300;
+  font-size: .85em;
   content: "\2197"; /* top right arrow: ↗ */
   color: var(--textcolor);
   opacity: .25;
@@ -277,6 +278,8 @@ a:before {
 a[href$=".pdf"]:before { content: "PDF"; }
 a[href$=".txt"]:before { content: "TXT"; }
 a[href$=".mp3"]:before { content: "MP3"; }
+a[href$=".zip"]:before { content: "ZIP"; }
+a[href$=".rar"]:before { content: "RAR"; }
 a[href$=".jpeg"]:before,
 a[href$=".jpg"]:before,
 a[href$=".gif"]:before,
