@@ -1,7 +1,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box;
-  
+
   /* Color scheme */
-  
+
   --textcolor: #121212;
   --bgcolor: #fff;
   --highlight: #2749c9;
@@ -33,10 +33,7 @@ section {
   padding: calc(6em + 5vw) 5vw 8vw 5vw;
   /* ! Everything below is needed ! */
   display: none;
-  position: absolute;
-  top: 0;
   min-height: 100vh;
-  width: 100%;
   background: var(--bgcolor);
 }
 
@@ -46,6 +43,11 @@ section:target { /* Show section */
 
 section#home { /* Show #home by default */
   display: block;
+}
+
+/* When a section is shown, hide default home section */
+section:target ~ section#home {
+  display: none;
 }
 
 /* ------- Header ------- */
@@ -162,7 +164,7 @@ img, svg, video, audio {
   height: auto;
   fill: currentColor;
 }
-  
+
 code, textarea {
   font-family: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
   font-size: 1em;
@@ -253,7 +255,7 @@ section:target iframe {
 
 /* External links */
 
-a[href*="//"]:after { 
+a[href*="//"]:after {
   font-weight: 300;
   font-size: .85em;
   content: "\2197"; /* top right arrow: ↗ */
@@ -268,7 +270,7 @@ a[href*="//"]:hover:after {
 
 /* File links */
 
-a:before { 
+a:before {
   font-size: .7em;
   margin-right: .4em;
 }
@@ -445,22 +447,22 @@ article time {
 /* ------- Print ------- */
 
 @media print {
-  
+
   nav, .lightbox:target:after { display: none; }
-  
+
   article, figure, img {
     page-break-inside: avoid;
     break-inside: avoid;
   }
-  
+
   /* Inline footnotes */
-  
+
   label + input + small { display: inline; }
   label + input + small:before { content: "["; }
   label + input + small:after { content: "]"; }
-  
+
   /* Slides */
-  
+
   .slides, .slides figure {
     position: relative;
     height: auto;
@@ -475,5 +477,5 @@ article time {
     height: 100vh;
     object-fit: contain;
   }
-    
+
 }
